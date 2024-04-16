@@ -14,7 +14,7 @@ ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 void ANaveEnemigaTransporte::BeginPlay() 
 {
     Super::BeginPlay();
-    GetWorld()->GetTimerManager().SetTimer(TiempoDisparo, this, &ANaveEnemigaTransporte::Disparar, 3.0f, true);
+    GetWorld()->GetTimerManager().SetTimer(TiempoDisparo, this, &ANaveEnemigaTransporte::Disparar, 2.0f, true);
 }
 
 void ANaveEnemigaTransporte::Mover(float DeltaTime)
