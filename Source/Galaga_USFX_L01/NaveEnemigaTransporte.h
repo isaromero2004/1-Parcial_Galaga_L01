@@ -26,7 +26,7 @@ public:
 	FORCEINLINE void SetCapacidadCargaVolumen(float capacidad) { capacidadCargaVolumen = capacidad; }
 
 protected:
-	virtual void BeginPlay();
+	virtual void BeginPlay()override;
 	virtual void Mover(float DeltaTime);
 	virtual void Disparar();
 public:

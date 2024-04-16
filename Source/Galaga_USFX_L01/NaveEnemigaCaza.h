@@ -21,7 +21,7 @@ public:
 	FORCEINLINE int GetCantidadBombas() const { return cantidadBombas; }
 	FORCEINLINE void SetCantidadBombas(int _cantidadBombas) { cantidadBombas = _cantidadBombas; }
 protected:
-	virtual void BeginPlay();
+	virtual void BeginPlay()override;
 	virtual void Mover(float DeltaTime);
 	virtual void Disparar();
 

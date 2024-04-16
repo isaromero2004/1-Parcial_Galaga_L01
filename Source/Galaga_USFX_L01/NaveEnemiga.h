@@ -70,8 +70,8 @@ public:
 	ANaveEnemiga();
 
 	int DireccionMovimientoHorizontal;
-	float MovimientoNaves = 400.0f;
-	float limiteInferior = 1600.0f;
+	//float MovimientoNaves = 400.0f;
+	//float limiteInferior = 1600.0f;
 	FTimerHandle TiempoDisparo;
 
 protected:

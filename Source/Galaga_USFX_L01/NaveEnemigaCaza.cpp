@@ -2,7 +2,7 @@
 
 
 #include "NaveEnemigaCaza.h"
-#include "Galaga_USFX_L01Projectile.h"
+#include "ProyectilGrande.h"
 
 ANaveEnemigaCaza::ANaveEnemigaCaza()
 {
@@ -16,7 +16,7 @@ ANaveEnemigaCaza::ANaveEnemigaCaza()
 void ANaveEnemigaCaza::BeginPlay()
 {
     Super::BeginPlay();
-    GetWorld()->GetTimerManager().SetTimer(TiempoDisparo, this, &ANaveEnemigaCaza::Disparar, 0.25f, true);
+    GetWorld()->GetTimerManager().SetTimer(TiempoDisparo, this, &ANaveEnemigaCaza::Disparar, 2.0f, true);
 }
 
 void ANaveEnemigaCaza::Mover(float DeltaTime)
@@ -27,7 +27,7 @@ void ANaveEnemigaCaza::Mover(float DeltaTime)
     float LimiteIzquierdo = -1000.0f;
 
     // Definir la velocidad de movimiento horizontal
-    float VelocidadHorizontal = 200.0f;
+    float VelocidadHorizontal = 500.0f;
 
     // Calcular el desplazamiento horizontal para este fotograma
     float DesplazamientoHorizontal = VelocidadHorizontal * DeltaTime;
@@ -77,7 +77,7 @@ void ANaveEnemigaCaza::Disparar()
     if (World != nullptr)
     {
 		// spawn the projectile
-		World->SpawnActor<AGalaga_USFX_L01Projectile>(PosicionNave + Offset, Rotacion);
+		World->SpawnActor<AProyectilGrande>(PosicionNave + Offset, Rotacion);
 	}
 
 	

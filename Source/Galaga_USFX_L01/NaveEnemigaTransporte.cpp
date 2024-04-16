@@ -14,7 +14,7 @@ ANaveEnemigaTransporte::ANaveEnemigaTransporte()
 void ANaveEnemigaTransporte::BeginPlay() 
 {
     Super::BeginPlay();
-    GetWorld()->GetTimerManager().SetTimer(TiempoDisparo, this, &ANaveEnemigaTransporte::Disparar, 2.0f, true);
+    GetWorld()->GetTimerManager().SetTimer(TiempoDisparo, this, &ANaveEnemigaTransporte::Disparar, 0.25f, true);
 }
 
 void ANaveEnemigaTransporte::Mover(float DeltaTime)
@@ -25,7 +25,7 @@ void ANaveEnemigaTransporte::Mover(float DeltaTime)
     float LimiteIzquierdo = -1000.0f;
 
     // Definir la velocidad de movimiento horizontal
-    float VelocidadHorizontal = 500.0f;
+    float VelocidadHorizontal = 600.0f;
 
     // Calcular el desplazamiento horizontal para este fotograma
     float DesplazamientoHorizontal = VelocidadHorizontal * DeltaTime;
